@@ -95,7 +95,8 @@ markdown_extensions:
 
 # Page Tree
 nav:
-  - Background : index.md
+  - Intro : index.md
   - HPCDME :
-    - Biowulf2HPCDME: HPCDME/transfer.md
     - Setup : HPCDME/setup.md
+    - Biowulf2HPCDME: HPCDME/transfer.md
+
