@@ -46,13 +46,14 @@ plugins:
 
 # Customization
 extra:
+  generator: false
   social:
     - icon: fontawesome/solid/users
       link: http://bioinformatics.cancer.gov
     - icon: fontawesome/brands/github
-      link: https://github.com/CCRGeneticsBranch
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/orgs/nciccbr/repositories
+      link: https://github.com/CCBR
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:vishal.koparde@nih.gov
   version:
     provider: mike
 
