@@ -147,7 +147,7 @@ A note can be added to the recently emptied folder stating where the contents ar
 
 ```bash
 % cd /data/CCBR/projects/ccbr796
-% echo "This folder was converted to a tarball (tar.gz) and pushed to HPCDME. Its new location is `/CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis/ccbr796.tar.gz` in HPCDME" > README.md
+% echo "This folder was converted to a tarball (tar.gz) and pushed to HPCDME. Its new location is \`/CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis/ccbr796.tar.gz\` in HPCDME" > README.md
 ```
 
 Done!
