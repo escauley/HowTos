@@ -2,7 +2,7 @@
 
 Rawdata or Project folders from Biowulf can be parked at a secure location after the analysis has reached a endpoint. Traditionally, CCBR analysts had access to the GridFTP Globus Archive for doing this. But, this Globus Archive has been running past 95% full lately.
 
-This document outlines how a projects folder can be directly parked on HPCDME as a single \"tar.gz\" ball. It is assumed that HPC DME API CLUs are already setup as per [these](https://ccbr.github.io/HowTos/HPCDME/setup/) instructions.
+This document outlines how a projects folder can be directly parked on HPCDME as a single "tar.gz" ball. It is assumed that HPC DME API CLUs are already setup as per [these](https://ccbr.github.io/HowTos/HPCDME/setup/) instructions.
 
 Here are the steps:
 
