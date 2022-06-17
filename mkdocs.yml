@@ -49,7 +49,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/solid/users
-      link: http://bioinformatics.cancer.gov
+      link: https://ccbr.ccr.cancer.gov/
     - icon: fontawesome/brands/github
       link: https://github.com/CCBR
     - icon: fontawesome/solid/paper-plane
