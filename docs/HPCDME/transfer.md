@@ -19,6 +19,14 @@ Once you have a list of files that you want to include in the tarball, create th
 41985209
 ```
 
+#### Create filelist
+
+Sometime you just want to know what files are in the tarball. Hence, it is important to upload a filelist along with the tarball.
+
+```bash
+% tar tzvf ccbr796.tar.gz > ccbr796.tar.gz.filelist
+```
+
 #### Create Project
 
 If the Project collection does not exist in HPCDME (verify using the web interface), then you may need to create it.
@@ -113,6 +121,14 @@ Using `meta` script from [`pyrkit`](https://github.com/CCBR/pyrkit), we can then
 
 If the file is large (100s of GB), then this may take a while as the md5sum of the file is being calculated. Hence, this should be submitted to the slurm. 
 
+Metadata also needs to be created for the filelist file. These files are generally small (few MBs) and the following command can be directly run on an interactive node.
+
+```bash
+% /data/kopardevn/SandBox/pyrkit/src/meta combined --input /data/CCBR/projects/ccbr796.tar.gz.filelist --output /CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis
+```
+
+The above command, when run sucessfully, will create `/data/CCBR/projects/ccbr796.tar.gz.filelist.metadata.json`
+
 #### Transfer
 
 `dm_register_dataobject` cannot be used for large files (>10GB), but it can be replaced by `dm_register_dataobject_multipart`
@@ -128,6 +144,14 @@ INFO: CLI_SUCCESS
 ```
 
 Depending on the size of the file, this step can be done in a reasonable amount of time (<1hr) and can be run in an interactive node.
+
+Remember, the filelist file also needs to be registered separately like this:
+
+```bash
+% dm_register_dataobject /data/CCBR/projects/ccbr796.tar.gz.filelist.metadata.json /CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis/ccbr796.tar.gz.filelist /data/CCBR/projects/ccbr796.tar.gz.filelist
+```
+
+As filelist files are smaller (few MBs), we can run `dm_register_dataobject` in place of `dm_register_dataobject_multipart`.
 
 #### Cleanup
 
@@ -151,3 +175,25 @@ A note can be added to the recently emptied folder stating where the contents ar
 ```
 
 Done!
+
+> **NOTE FOR LARGE FILES**: It is recommended by HPCDME staff that files to be transferred should not be too large (1TB or smaller). Hence, if the file to be transferred is larger than 1TB, it should be split into 1TB-size chunks and upload those.
+> Splitting can be done like this:
+> ```bash
+> split -b 1T ccbr796.tar.gz "ccbr796.tar.gz.part_"
+> ```
+> Metadata needs to be individidually created for each of the parts, namely, `ccbr796.tar.gz.part_aa`, `ccbr796.tar.gz.part_ab`, etc 
+> ```bash
+> % /data/kopardevn/SandBox/pyrkit/src/meta combined --input /data/CCBR/projects/ccbr796.tar.gz.part_aa --output /CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis
+> % /data/kopardevn/SandBox/pyrkit/src/meta combined --input /data/CCBR/projects/ccbr796.tar.gz.part_ab --output /CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis
+> ...
+> ```
+> Next each 1TB part can be registered like so:
+> ```bash
+> % dm_register_dataobject_multipart /data/CCBR/projects/ccbr796.tar.gz.part_aa.metadata.json /CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis/ccbr796.tar.gz.part_aa /data/CCBR/projects/ccbr796.tar.gz.part_aa
+> % dm_register_dataobject_multipart /data/CCBR/projects/ccbr796.tar.gz.part_ab.metadata.json /CCBR_Archive/GRIDFTP/Project_CCBR-796/Analysis/ccbr796.tar.gz.part_ab /data/CCBR/projects/ccbr796.tar.gz.part_ab
+> ...
+> ```
+> Once these files are downloaded then can be joined together using the `cat` command before ungzipping/untaring.
+> ```bash 
+> % cat ccbr796.tar.gz.part_* > ccbr796.tar.gz
+> ``` 
