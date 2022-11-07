@@ -20,6 +20,15 @@ pip install mkdocs
 pip install mkdocs-material
 ```
 
+Also install other common dependencies:
+
+```bash
+pip install mkdocs-pymdownx-material-extras
+pip install mkdocs-git-revision-date-localized-plugin
+pip install mkdocs-git-revision-date-plugin
+pip install mkdocs-minify-plugin
+```
+
 #### Conventions
 
 Generally, for GitHub repos with GitHub pages:
