@@ -99,7 +99,7 @@ nav:
   - Intro : index.md
   - GitHub:
     - Personal Access Token: GitHub/PAT.md
-    - Create new repo: GitHub/newrepo.md
+    - Repo Mgmt: GitHub/repo.md
     - Setup Pages: GitHub/setuppages.md
     - Passwordless login: GitHub/login.md
   - HPCDME :
