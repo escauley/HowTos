@@ -88,7 +88,7 @@ This is a two step process.
 
   * Create the branch locally
 ```bash
-git create -b <newbranch>
+git checkout -b <newbranch>
 ```
 
  * Push the branch to remote
