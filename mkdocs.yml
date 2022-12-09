@@ -108,4 +108,5 @@ nav:
   - UCSC Tracks:
     - Overview: UCSC/overview.md
     - Creating Inputs: UCSC/creating_inputs.md
+    - Creating Tracks Info: UCSC/creating_track_info.md
     - Creating Tracks: UCSC/creating_tracks.md
