@@ -110,3 +110,11 @@ for sample_id in ${deg_list[@]}; do
     done
 done
 ```
+
+# Other tips
+Users can also change the colors of the tracks using standard HTML color features. Common colors used are provided below:
+```
+Red=205,92,92
+Blue=65,105,225
+Black=0,0,0
+```
