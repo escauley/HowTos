@@ -1,7 +1,31 @@
-# Generating Tracks
+# Generating New Tracks
 1. Login to VPN
-2. Login to the UCSC Browser website
-3. Select "My Data"
-4. Add Track info
+2. Login to the [UCSC Browser website](https://hpcnihapps.cit.nih.gov/genome/cgi-bin/hgSession)
+3. Select "My Data > Custom Tracks"
+4. Select "Add Custom Tracks"
+5. Paste the track data generated in [Creating Track Info](https://ccbr.github.io/HowTos/UCSC/creating_track_info/) into the text box
+6. Select "Submit"
+7. Review the track information. The column "Error" should be empty. If there is an error then a hyperlink will display "Show" although this often does not contain helpful error information.
+8. After troubleshooting any errors select "Go"
+9. Use the features at the bottom of the page to alter views and/or add additional track information
+10. Select "My Data > My Sessions"
+11. Under "Save current settings as named session:" enter a descriptive name of the session
+12. Select "Submit"
+13. This will move the descriptive name entered into the "session name" list
+14. Select the descriptve name, view your track information as saved
+15. Copy the hyperlink for this session and share as needed
 
-# will be updated when Biowulf returns functionality
+# Editing a Previous Tracks
+1. Login to VPN
+2. Login to the [UCSC Browser website](https://hpcnihapps.cit.nih.gov/genome/cgi-bin/hgSession)
+3. Select "My Data > My Sessions"
+4. Select the descriptve name of the session you'd like to edit
+5. Edit the tracks as needed:
+    - If wanting to remove or add tracks, then select "My Data > Custom Tracks"; follow steps 5-8 above.
+    - If wanting to edit the view of the tracks, follow step 9 above.
+10. Select "My Data > My Sessions"
+11. Under "Save current settings as named session:" enter a new descriptive name OR the previous name of the session if you'd like to overwrite it
+12. Select "Submit"
+13. This will move the descriptive name entered into the "session name" list
+14. Select the descriptve name, view your track information as saved
+15. Copy the hyperlink for this session and share as needed
