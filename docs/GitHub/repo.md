@@ -100,3 +100,18 @@ OR
 git push -u origin HEAD
 ```
 This is a shortcut to push the current branch to a branch of the same name on `origin` and track it so that you don't need to specify `origin HEAD` in the future.
+
+
+### Deleting branches
+
+#### Locally
+
+```bash
+git branch -d <BranchName>
+```
+
+#### on GitHub
+
+```bash
+git push origin --delete <BranchName>
+```
