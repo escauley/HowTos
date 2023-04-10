@@ -1,4 +1,3 @@
-# Best Practices
 ## GitHub Actions for Pipelines 
 
 The following describe the minimum GitHub actions that should be deployed with any production pipeline. The actions are automatically provided via the [cookiecutter](https://github.com/CCBR/CCBR_SnakemakePipelineCookiecutter) template.

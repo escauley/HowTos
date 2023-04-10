@@ -1,31 +1,34 @@
-# Best Practices
-## GitHub Repositories
+# GitHub Repositories
 
-### Repository Location
+## Repository Location
 
 - All CCBR developed pipelines should be created under [CCBR's GitHub Org Account](https://github.com/CCBR/).
 
-### Use of CookieCutter Templates
+## Use of CookieCutter Templates
 
 - All CCBR developed pipelines should be created from the appropriate cookiecutter template:
     - TechDev Projects: https://github.com/CCBR/CCBR_CCBRTechDevCookieCutter
     - Snakemake Pipelines: https://github.com/CCBR/CCBR_SnakemakePipelineCookiecutter
 
-### Security settings
+## Security settings
 
 - Two members of CCBR (creator and one manager) should be granted full administrative priveleges to the repository to ensure the source code can be accessed by other members, as needed
 - Both the develop and master branch must be protected (IE have to have a PR to be changed) 
 
-### Branches
-
-- All repositories should include a minimum of two branches: main (master) and dev.
-- Features should be developed using individual, feature specific branches, following documentation below (See Development Workflow below)
-
 ## CCBR Branch Strategy
 
+### Branch Overview
+
+- All repositories should include a minimum of two branches at any time: 
+    - main (master) 
+    - dev
+- Additional bracnhes should be created as needed. These would include feature branches, developed using individual, feature specific addition and hotfix branches, developed using individual, bug specific fixes. 
+- Utilization of these branches should follow the documentation below.
+
+### Strategy Outline
 We encourage the use of the [Git Flow tools](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for some actions, available on Biowulf. Our current branching strategy is based off of the Git Flow strategy shown below :
 
-![Image title](https://github.com/CCBR/CARLISLE/blob/docs/GitHub/img/gitflow_workflow.svg?raw=true)
+![Image title](https://github.com/CCBR/CARLISLE/blob/img/gitflow_workflow.svg?raw=true)
 
 The CCBR Branching strategy is as follows:
 
@@ -46,10 +49,10 @@ The CCBR Branching strategy is as follows:
     - recommended usage of `git flow hotfix start unique_hotfix_name`
     - no merges into this branch are expected 
 
-#### Note: 
+## Note: 
 While the `git flow feature start` command is recommended for feature branch merging, the `git flow feature finish` is not. Using the `finish` command will automatically merge the `feature` branch into the `dev` branch, without any testing, and regardless of divergence that may have occured during feature development.
 
-### Versioning, tagging, releases
+## Versioning, tagging, releases
 The following format of versioning should be followed:
 
     v.X.Y.Z
@@ -67,6 +70,6 @@ Other notes:
 - Updates to the dev branch can be tagged, but should not be versioned
 - If the pipeline is available locally (IE on Biowulf), version changes should be added for use
 
-### Documentation
+## Documentation
 
 - All pipelines should provide users with documentation for usage, test data, expected outputs, and troubleshooting information. [Mkdocs](https://www.mkdocs.org/) is the recommended tool to perform this action, however, other tools may be utilized. The [cookiecutter](https://github.com/CCBR/CCBR_CCBRTechDevCookieCutter) template's (written for mkdocs) provided have basic yaml markdown files provided for this use, and should be edited according to the pipelines function and user needs. 
