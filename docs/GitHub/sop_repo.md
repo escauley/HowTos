@@ -28,7 +28,7 @@
 ### Strategy Outline
 We encourage the use of the [Git Flow tools](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for some actions, available on Biowulf. Our current branching strategy is based off of the Git Flow strategy shown below :
 
-![Image title](https://github.com/CCBR/CARLISLE/blob/img/gitflow_workflow.svg?raw=true)
+![Image title](https://github.com/CCBR/HowTos/tree/main/img/gitflow_workflow.svg?raw=true)
 
 The CCBR Branching strategy is as follows:
 
@@ -49,10 +49,10 @@ The CCBR Branching strategy is as follows:
     - recommended usage of `git flow hotfix start unique_hotfix_name`
     - no merges into this branch are expected 
 
-## Note: 
-While the `git flow feature start` command is recommended for feature branch merging, the `git flow feature finish` is not. Using the `finish` command will automatically merge the `feature` branch into the `dev` branch, without any testing, and regardless of divergence that may have occured during feature development.
+### Note
+- While the `git flow feature start` command is recommended for feature branch merging, the `git flow feature finish` is not. Using the `finish` command will automatically merge the `feature` branch into the `dev` branch, without any testing, and regardless of divergence that may have occured during feature development.
 
-## Versioning, tagging, releases
+## Release, Tagged Nomenclature
 The following format of versioning should be followed:
 
     v.X.Y.Z
