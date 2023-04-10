@@ -105,7 +105,7 @@ nav:
   - GitHub Best Practices:
     - GitHub Repos: GitHub/sop_repo.md
     - GitHub Actions: GitHub/sop_actions.md
-    - Test Data Creation: GitHub/sop_testdata.m
+    - Test Data Creation: GitHub/sop_testdata.md
   - HPCDME :
     - Setup : HPCDME/setup.md
     - Biowulf2HPCDME: HPCDME/transfer.md
