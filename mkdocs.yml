@@ -97,11 +97,14 @@ markdown_extensions:
 # Page Tree
 nav:
   - Intro : index.md
-  - GitHub:
+  - GitHub Set-Up:
     - Personal Access Token: GitHub/PAT.md
     - Repo Mgmt: GitHub/repo.md
     - Setup Pages: GitHub/setuppages.md
     - Passwordless login: GitHub/login.md
+  - GitHub Best Practices:
+    - GitHub Repos: GitHub/sop_repo.md
+    - GitHub Actions: GitHub/sop_actions.md
   - HPCDME :
     - Setup : HPCDME/setup.md
     - Biowulf2HPCDME: HPCDME/transfer.md
