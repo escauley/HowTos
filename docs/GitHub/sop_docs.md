@@ -1,16 +1,16 @@
 # GitHub Best Practices: Documentation
 GitHub [Pages](https://pages.github.com/) is quick and easy way to build static websites for your GitHub repositories. Essentially, you write pages in [Markdown](https://www.markdownguide.org/) which are then rendered to HTML and hosted on GitHub, free of cost! 
 
-CCBR has used GitHub pages to provide extensive, legible and origanized documentation for many of our pipelines:
+CCBR has used GitHub pages to provide extensive, legible and origanized documentation for our pipelines. Examples are included below:
 
+- [CARLISLE](https://ccbr.github.io/CARLISLE/)
 - [Pipeliner](https://ccbr.github.io/pipeliner-docs/)
 - [RNA-seek](https://ccbr.github.io/RNA-seek/)
 - [Exome-seek](https://ncipangea.github.io/CCBR_GATK4_Exome_Seq_Pipeline/)
-and many others.
 
-We prefer to use [`mkdocs`](https://www.mkdocs.org/) with [Material](https://squidfunk.github.io/mkdocs-material/getting-started/) theme for most of our GitHub Pages websites.
+[`Mkdocs`](https://www.mkdocs.org/) is the with documentation tool prefered, with the [Material](https://squidfunk.github.io/mkdocs-material/getting-started/) theme, for most of the CCBR GitHub Pages websites.
 
-## Install tools
+## Install MkDocs, themes
 
 `mkdocs` and the Material for mkdocs theme can be installed using the following:
 
@@ -182,13 +182,14 @@ INFO     -  Documentation built in 0.32 seconds
 
 The above command creates a local `site` folder which is the root of your "to-be-hosted" website. You can now open the HTMLs in the `site` folder locally to ensure that that HTML is as per you liking. If not, then you can make edits to the `.md` files and rebuild the site.
 
-> **NOTE**: You do not want to push the `site` folder back to GH and hence it needs to be added to `.gitignore` file:
-> ```bash
-> echo "**/site/*" > .gitignore
-> git add .gitignore
-> git commit -m "adding .gitignore"
-> git push
-> ```
+**NOTE**: You do not want to push the `site` folder back to GH and hence it needs to be added to `.gitignore` file:
+
+```bash
+echo "**/site/*" > .gitignore
+git add .gitignore
+git commit -m "adding .gitignore"
+git push
+```
 
 ## Deploy site
 
@@ -218,5 +219,12 @@ To https://github.com/CCBR/xyz.git
 INFO     -  Your documentation should shortly be available at: https://CCBR.github.io/xyz/
 ```
 
-Done! Now if you point your web browser to the URL from `gh-deploy` command you will see your HTML hosted on GitHub. The cookiecutter template includes a GitHub action which will automatically perform the above tasks whenever a push is performed to the main branch.
+Now if you point your web browser to the URL from `gh-deploy` command (IE https://CCBR.github.io/xyz/) you will see your HTML hosted on GitHub. After creating your docs, the cookiecutter template includes a GitHub action which will automatically perform the above tasks whenever a push is performed to the main branch.
+
+## Add to the GitHub page
+
+1. Go to the main GitHub page of your repository
+2. On the top right select the `gear` icon next to `About`
+3. Under `Website`, select `Use your GitHub Pages website`.
+4. Select `Save Changes`
 
