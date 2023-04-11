@@ -28,7 +28,7 @@
 ### Strategy Outline
 We encourage the use of the [Git Flow tools](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for some actions, available on Biowulf. Our current branching strategy is based off of the Git Flow strategy shown below :
 
-![Image title](https://github.com/CCBR/HowTos/tree/main/img/gitflow_workflow.svg?raw=true)
+![Image title](https://github.com/CCBR/HowTos/blob/main/img/gitflow_workflow.svg?raw=true)
 
 The CCBR Branching strategy is as follows:
 
