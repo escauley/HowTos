@@ -6,7 +6,6 @@ CCBR has used GitHub pages to provide extensive, legible and origanized document
 - [CARLISLE](https://ccbr.github.io/CARLISLE/)
 - [Pipeliner](https://ccbr.github.io/pipeliner-docs/)
 - [RNA-seek](https://ccbr.github.io/RNA-seek/)
-- [Exome-seek](https://ncipangea.github.io/CCBR_GATK4_Exome_Seq_Pipeline/)
 
 [`Mkdocs`](https://www.mkdocs.org/) is the with documentation tool prefered, with the [Material](https://squidfunk.github.io/mkdocs-material/getting-started/) theme, for most of the CCBR GitHub Pages websites.
 
