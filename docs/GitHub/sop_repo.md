@@ -1,14 +1,6 @@
-# GitHub Repositories
+# GitHub Best Practices: Repository Management
 
-## Repository Location
-
-- All CCBR developed pipelines should be created under [CCBR's GitHub Org Account](https://github.com/CCBR/).
-
-## Use of CookieCutter Templates
-
-- All CCBR developed pipelines should be created from the appropriate cookiecutter template:
-    - TechDev Projects: https://github.com/CCBR/CCBR_CCBRTechDevCookieCutter
-    - Snakemake Pipelines: https://github.com/CCBR/CCBR_SnakemakePipelineCookiecutter
+Users should follow the [set-up]() information provided to learn more about where and how to create a new repository, before following the management best practices below.
 
 ## Security settings
 

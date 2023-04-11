@@ -1,10 +1,11 @@
-## GitHub Actions for Pipelines 
+# GitHub Best Practices: GitHub Actions
 
 The following describe the minimum GitHub actions that should be deployed with any production pipeline. The actions are automatically provided via the [cookiecutter](https://github.com/CCBR/CCBR_SnakemakePipelineCookiecutter) template.
 
 1. Documentation (assumes `mkdocs build`; required)
 
-    - This rule will automatically update any documentation built with mkdocs for all PR's.
+    - These rules will automatically update any documentation built with mkdocs for all PR's.
+    - Rule Name(s): mkdocs_build --> pages-build-and-deployment
 
 2. Dry-run with test sample data for any PR to dev branch (required)
 
