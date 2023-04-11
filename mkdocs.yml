@@ -98,12 +98,12 @@ markdown_extensions:
 nav:
   - Intro : index.md
   - GitHub:
-    - GitHub Overview: GitHub/overview.md
-    - Setting up an Env: GitHub/setup_env.md
-    - Creating a Repo: GitHub/setup_repo.md
-    - Repo Management: GitHub/sop_repo.md
+    - Overview: GitHub/overview.md
+    - Preparing your environment: GitHub/setup_env.md
+    - Creating your GitHub repo: GitHub/setup_repo.md
+    - Repository Management: GitHub/sop_repo.md
     - Documentation: GitHub/sop_docs.md
-    - Actions: GitHub/sop_actions.md
+    - GitHub Actions: GitHub/sop_actions.md
     - Test Data: GitHub/sop_testdata.md
   - HPCDME :
     - Setup : HPCDME/setup.md
