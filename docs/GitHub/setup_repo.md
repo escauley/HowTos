@@ -11,7 +11,9 @@
     - Snakemake Pipelines: https://github.com/CCBR/CCBR_SnakemakePipelineCookiecutter
 
 ## Creating a new repository
-- To create a new repository on Github using [gh cli](https://cli.github.com/), you can run the following command on [Biowulf](https://hpc.nih.gov) update the new repository name (<ADD NEW REPO NAME>) and the repository description (<ADD REPO DESCRIPTION>) commands below. **NOTE** Do not remove the `CCBR/` leading the repository name, as this will correctly place the repository under the CCBR organizaiton account.
+To create a new repository on Github using [gh cli](https://cli.github.com/), you can run the following command on [Biowulf](https://hpc.nih.gov) after you update the new repository name (`<ADD NEW REPO NAME>`) and the repository description (`<ADD REPO DESCRIPTION>`) commands below. 
+
+  **NOTE:** Do not remove the `CCBR/` leading the repository name, as this will correctly place the repository under the CCBR organizaiton account.
 
 ```bash
 gh repo create CCBR/<ADD NEW REPO NAME> \
@@ -21,7 +23,7 @@ gh repo create CCBR/<ADD NEW REPO NAME> \
 --confirm
 ```
 
-- Once the repo is created, then you can clone a local copy of the new repository:
+Once the repo is created, then you can clone a local copy of the new repository:
 
 ```bash
 gh repo clone CCBR/<reponame>.git
@@ -44,26 +46,26 @@ git add <thisfile>
 git add <thatfile>
 ```
 
-Push
+Push changes to branch named `new_feature`
 ```bash
-git push
+git push origin new_feature
 ```
 
 ### Pulling remote changes to local
 
-Simply,
+Pull changes from branch `new_feature` into your branch `old_feature`
 ```bash
-git pull
+git checkout old_feature
+git pull new_feature
 ```
 
-This will not work if you have local changes. Then you have 2 choices:
-
-- ignore local changes and pull remote
+If you have non-compatable changes in the `old_feature` branch, there are two options:
+1) ignore local changes and pull remote anyways. This will delete the changes you've made to your remote respository.
 ```bash
 git reset --hard
 git pull
 ```
-- temporarily stash changes away, pull and reapply changes
+2) temporarily stash changes away, pull and reapply changes after.
 ```bash
 git stash
 git pull
