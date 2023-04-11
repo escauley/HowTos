@@ -39,7 +39,7 @@ theme:
 # Plugins
 plugins:
   - search
-  - git-revision-date
+  - git_revision_date
   - minify:
       minify_html: true
 
