@@ -1,10 +1,15 @@
 # GitHub Setup: Preparing the Environment
 
-## GH Paths
+## Using GitHub CLI
 The `gh` is installed on Biowulf at `/data/CCBR_Pipeliner/db/PipeDB/bin/gh_1.7.0_linux_amd64/bin/gh`. You can run the following lines to edit your `~/.bashrc` file to add `gh` to your `$PATH`:
 ```bash
 echo "export PATH=$PATH:/data/CCBR_Pipeliner/db/PipeDB/bin/gh_1.7.0_linux_amd64/bin" >> ~/.bashrc
 source ~/.bashrc
+```
+
+Alternatively, you can use the `git` commands provided through a Biowulf module
+```bash
+module load git
 ```
 
 ## Creating PAT for GH 
