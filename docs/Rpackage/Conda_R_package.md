@@ -51,27 +51,45 @@ In each section you will add the path to the directories you would like to use f
 **Example:**
 
 ```
-kgs_dirs:<br>
-  - /rstudio-files/ccbr-data/users/Ned/conda-cache<br>
-envs_dirs:<br>
-  - /rstudio-files/ccbr-data/users/Ned/conda-envs<br>
-conda-build:<br>
-    root-dir: /rstudio-files/ccbr-data/users/Ned/conda-bld<br>
-    build_folder: /rstudio-files/ccbr-data/users/Ned/conda-bld
-    conda-build<br>
-  output_folder: /rstudio-files/ccbr-data/users/Ned/conda-bld/conda-output<br>
-channels:<br>
-  - file://rstudio-files/RH/ccbr-projects/Conda_package_tutorial/local_channel/channel<br>
-  - conda-forge<br>
-  - bioconda<br>
-  - defaults<br>
+kgs_dirs:
+  - /rstudio-files/ccbr-data/users/$USER/conda-cache
+envs_dirs:
+  - /rstudio-files/ccbr-data/users/$USER/conda-envs
+conda-build:
+    root-dir: /rstudio-files/ccbr-data/users/$USER/conda-bld
+    build_folder: /rstudio-files/ccbr-data/users/$USER/conda-bld
+    conda-build
+  output_folder: /rstudio-files/ccbr-data/users/$USER/conda-bld/conda-output
+channels:
+  - file://rstudio-files/RH/ccbr-projects/Conda_package_tutorial/local_channel/channel
+  - conda-forge
+  - bioconda
+  - defaults
 ```
 
 <br>
 <br>
 
+### Add Conda Channels
+
+<br>
+
+You will also need to add Conda channels, so that when Conda can resolve the available depndencies by pulling from available Conda R packages within the Conda channels. If a dependency with a specific version is needed and is not in the added Conda channels, the Conda build will fail. 
+
+To add a channel perform the following:
+
+config --add channels <channel_name>
+
+For <channel_name>, you can see some example conda channels that were added above in the .condarc file:
+
+  - file://rstudio-files/RH/ccbr-projects/Conda_package_tutorial/local_channel/channel
+  - conda-forge
+  - bioconda
+  - defaults
+
 ### Check Conda setup
 
+<br>
 <br>
 
 To check that conda has been setup witht the specified paths from .condarc start conda:
@@ -85,6 +103,20 @@ Then check the conda info:
 ```
 conda info
 ```
+
+<br>
+<br>
+
+### Setup Conda Channels
+
+<br>
+
+To build a Conda package, 'channels' are needed to supply the dependencies that are specified in the DESCRIPTION and meta.yaml files (discussed below). These R packages in these channels are also Conda packages that have been previously built as a specific version of that package and given a 'build string', a unique indentifier for the build of that specific conda package. 
+
+For channels to be available to you when you build your own conda package, you first need to add them. To add a Conda channel run:
+
+
+
 
 <br>
 <br>
@@ -279,7 +311,7 @@ When the "meta.yaml" has been prepared, you can now build the Conda package.
 To do so, run the command:
 
 ```
-conda-build $r-package 2>&1|tee $build_log_name.log
+conda-build $r-package 2>&1 | tee $build_log_name.log
 ```
 
 Replace $r-package with the name of the R package folder that was created after running conda skeleton (the folder where the meta.yaml is located).
