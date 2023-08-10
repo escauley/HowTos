@@ -68,24 +68,6 @@ channels:
 ```
 
 <br>
-<br>
-
-### Add Conda Channels
-
-<br>
-
-You will also need to add Conda channels, so that when Conda can resolve the available depndencies by pulling from available Conda R packages within the Conda channels. If a dependency with a specific version is needed and is not in the added Conda channels, the Conda build will fail. 
-
-To add a channel perform the following:
-
-config --add channels <channel_name>
-
-For <channel_name>, you can see some example conda channels that were added above in the .condarc file:
-
-  - file://rstudio-files/RH/ccbr-projects/Conda_package_tutorial/local_channel/channel
-  - conda-forge
-  - bioconda
-  - defaults
 
 ### Check Conda setup
 
@@ -115,8 +97,14 @@ To build a Conda package, 'channels' are needed to supply the dependencies that 
 
 For channels to be available to you when you build your own conda package, you first need to add them. To add a Conda channel run:
 
+config --add channels <channel_name>
 
+For <channel_name>, some examples are:
 
+  - file://rstudio-files/RH/ccbr-projects/Conda_package_tutorial/local_channel/channel
+  - conda-forge
+  - bioconda
+  - defaults
 
 <br>
 <br>
